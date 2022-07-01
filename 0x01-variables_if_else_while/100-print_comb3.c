@@ -24,7 +24,6 @@ break;
 putchar(',');
 putchar(' ');
 }
-{
 i++;
 }
 e++;
