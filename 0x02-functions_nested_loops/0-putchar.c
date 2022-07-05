@@ -2,7 +2,8 @@
 #include "main.h"
 
 /**
- * main - Prints _putchar, followed by a new line.
+ * main -check description
+ * Description: Prints _putchar, followed by a new line.
  * Return: Always 0 (Success)
  */
 
