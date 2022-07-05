@@ -15,23 +15,23 @@ void times_table(void)
 
 			if (columns == 0)
 			{
-				putchar('0' + result);
+				_putchar('0' + result);
 			}
 			else if (result <= 9)
 			{
-				putchar(',');
-				putchar(' ');
-				putchar(' ');
-				putchar('0' + result);
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar('0' + result);
 			}
 			else if (result > 9)
 			{
-				putchar(',');
-				putchar(' ');
-				putchar('0' + (result / 10));
-				putchar('0' + (result % 10));
+				_putchar(',');
+				_putchar(' ');
+				_putchar('0' + (result / 10));
+				_putchar('0' + (result % 10));
 			}
 		}
-		putchar('\n');
+		_putchar('\n');
 	}
 }
