@@ -1,51 +1,46 @@
-#include <unistd.h>
 #include "main.h"
 /**
- * print_times_table - prints the n times table, starting with 0
- * @n: number of the times table
+ * print_times_table-print multiplication table
+ * @n:input
  */
-
 void print_times_table(int n)
-	
 {
-	int i, j, k;
+	int rows, columns, result;
 
 	if (n >= 0 && n <= 15)
 	{
-		for (i = 0; i <= n; i++)
+		for (rows = 0; rows <= n; rows++)
 		{
-			for (j = 0; j <= n; j++)
+			for (columns = 0; columns <= n; columns++)
 			{
-				k = j * i;
-				if (j == 0)
+				result = columns * rows;
+				if (columns == 0)
+					_putchar('0' + result);
+				else
 				{
-					
-			                putchar(k + '0');
-				} else if (k < 10 && j != 0)
-				{
-					putchar(',');
-					putchar(' ');
-					putchar(' ');
-					putchar(' ');
-					putchar(k + '0');
-				} else if (k >= 10 && k < 100)
-				{
-					putchar(',');
-					putchar(' ');
-					putchar(' ');
-					putchar((k / 10) + '0');
-					putchar((k % 10) + '0');
-				} else if (k >= 100)
-				{
-					putchar(',');
-					putchar(' ');
-					putchar((k / 100) + '0');
-					putchar(((k / 10) % 10) + '0');
-					putchar((k % 10) + '0');
+					_putchar(',');
+					_putchar(' ');
+					if (result <= 9)
+					{
+						_putchar(' ');
+						_putchar(' ');
+						_putchar('0' + result);
+					}
+					else if (result > 9 && result < 100)
+					{
+						_putchar(' ');
+						_putchar('0' + (result / 10));
+						_putchar('0' + (result % 10));
+					}
+					else if (result >= 100)
+					{
+						_putchar('0' + (result / 100));
+						_putchar('0' + ((result / 10) % 10));
+						_putchar('0' + (result % 10));
+					}
 				}
 			}
-			putchar('\n');
+			_putchar('\n');
 		}
 	}
 }
-
