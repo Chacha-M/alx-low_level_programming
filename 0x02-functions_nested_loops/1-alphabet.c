@@ -1,19 +1,16 @@
 #include "main.h"
 
 /**
- * print alphabet - in lowercase, followed by a new line
- *
- * Return: Always 0 (Success)
+ * print_alphabet-prints alphabets
+ * Return: always 0 is success
  */
 void print_alphabet(void)
 {
-	int i;
+	char letter = 'a';
 
-	for (i = 'a'; i <= 'z'; i++)
-	{
-		putchar(i);
-	}
-
-	putchar('\n');
-
+	do {
+		_putchar(letter);
+		letter++;
+	} while (letter <= 'z');
+	_putchar('\n');
 }
