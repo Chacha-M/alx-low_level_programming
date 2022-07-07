@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "main.h"
-
 /**
  * mul - multiplies two integers.
  * @a: first number.
@@ -9,5 +8,5 @@
  */
 int mul(int a, int b)
 {
-	return (a * b);
+return (a * b);
 }
