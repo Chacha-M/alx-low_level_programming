@@ -7,10 +7,7 @@
  * @b: secondary number to multiply
  * Return: multiplication of a * b
  */
-
 int mul(int a, int b)
 {
-
 	return (a * b);
-
 }
