@@ -1,5 +1,5 @@
 #include "main.h"
-i/**
+/**
  * print_square - prints hashes squares.
  * @size: size of the square.
  * Return: no return.
