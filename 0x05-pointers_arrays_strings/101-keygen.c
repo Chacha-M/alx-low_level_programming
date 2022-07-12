@@ -1,36 +1,25 @@
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 #include <time.h>
 /**
- * main-start of program
- * Return:0 is success
+ * main - generates keygen.
+ * Return: 0 Always.
  */
-
 int main(void)
 {
-	int i, paslen;
-	char pass[];
+	int r = 0, c = 0;
 	time_t t;
 
-	srand((unsigned) time(&t));
-
-	for (i = 0; i < 8; i++)
+	srand((unsigned int) time(&t));
+	while (c < 2772)
 	{
-		j = rand() % 7;
-		pass[i] = j;
-		for (l = 'a'; l <= 'z'; l++)
-		{	
-			pass[i+1] = l;	
-		}
+		r = rand() % 128;
+		if ((c + r) > 2772)
+			break;
+		c = c + r;
+		printf("%c", r);
 	}
-	paslen = strlen(pass[]);
-	if (paslen = 16)
-	{
-		printf("%s",pass[]);
-	}
-	else
-		pass[] = pass[] + j;
-		printf("%s", pass[]);
+	printf("%c\n", (2772 - c));
 	return (0);
 }
+
