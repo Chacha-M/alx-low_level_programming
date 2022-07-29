@@ -3,10 +3,10 @@
 #include <stdio.h>
 
 int find_len(char *str);
-char *create_array(int size);
+char *create_xarray(int size);
 char *iterate_zeroes(char *str);
 void get_prod(char *prod, char *mult, int digit, int zeroes);
-void add_num(char *final_prod, char *next_prod, int next_len);
+void add_nums(char *final_prod, char *next_prod, int next_len);
 
 /**
  * find_len - Finds the length of a string.
@@ -25,7 +25,7 @@ int find_len(char *str)
 }
 
 /**
- * create_array - Creates an array of chars and initializes it with
+ * create_xarray - Creates an array of chars and initializes it with
  *                 the character 'x'. Adds a terminating null byte.
  * @size: The size of the array to be initialized.
  *
@@ -33,7 +33,7 @@ int find_len(char *str)
  *              function exits with a status of 98.
  * Return: A pointer to the array.
  */
-char *create_array(int size)
+char *create_xarray(int size)
 {
 	char *array;
 	int index;
@@ -137,12 +137,12 @@ void get_prod(char *prod, char *mult, int digit, int zeroes)
 }
 
 /**
- * add_num - Adds the numbers stored in two strings.
+ * add_nums - Adds the numbers stored in two strings.
  * @final_prod: The buffer storing the running final product.
  * @next_prod: The next product to be added.
  * @next_len: The length of next_prod.
  */
-void add_num(char *final_prod, char *next_prod, int next_len)
+void add_nums(char *final_prod, char *next_prod, int next_len)
 {
 	int num, tens = 0;
 
